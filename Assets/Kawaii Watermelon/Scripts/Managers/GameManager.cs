@@ -21,16 +21,9 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         SetMenu();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     private void SetMenu()
@@ -73,4 +66,26 @@ public class GameManager : MonoBehaviour
     {
         SetGameover();
     }
+
+    // YENİ EKLENDİ BAŞLANGIÇ
+    /// <summary>
+    /// Belirtilen saniye kadar bekledikten sonra oyunu bitirir.
+    /// FruitManager tarafından çağrılır.
+    /// </summary>
+    /// <param name="delay">Saniye cinsinden bekleme süresi.</param>
+    public void EndGameAfterDelay(float delay)
+    {
+        // Eğer oyun zaten bitmişse tekrar bitirme.
+        if (gameState == GameState.Gameover)
+            return;
+
+        StartCoroutine(GameoverCoroutine(delay));
+    }
+
+    private IEnumerator GameoverCoroutine(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        SetGameoverState();
+    }
+    // YENİ EKLENDİ SON
 }

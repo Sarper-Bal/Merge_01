@@ -4849,6 +4849,8 @@ MonoBehaviour:
   fruitSpawnLine: {fileID: 2084674380}
   fruitsYSpawnPos: 3
   spawnDelay: 0.5
+  fruitDropLimit: 2
+  gameOverDelay: 3
   enableGizmos: 0
 --- !u!114 &1724485916
 MonoBehaviour:

@@ -4840,15 +4840,14 @@ MonoBehaviour:
   - {fileID: 4825705779037878747, guid: bb54f85231d0df54b947a15886520c3c, type: 3}
   - {fileID: 4825705779037878747, guid: a5bc3b7896d68964e879f1e8a3d65584, type: 3}
   - {fileID: 4825705779037878747, guid: d8e03755f4b3bdd4399f4e96a8cb7be8, type: 3}
+  spawnableFruits:
+  - {fileID: 4091401119984135131, guid: b5158bf5f6eb18a42b601a67df7b91cb, type: 3}
   fruitsParent: {fileID: 760951083}
   fruitSpawnLine: {fileID: 2084674380}
   fruitsYSpawnPos: 3
   spawnDelay: 0.5
-  fruitSequence:
-  - {fileID: 4091401119984135131, guid: b5158bf5f6eb18a42b601a67df7b91cb, type: 3}
-  - {fileID: 4825705779037878747, guid: 503481cb05ef0784a972735fd00ab1a7, type: 3}
-  - {fileID: 4825705779037878747, guid: 503481cb05ef0784a972735fd00ab1a7, type: 3}
-  gameRestartDelay: 3
+  fruitDropLimit: 3
+  gameOverDelay: 3
   enableGizmos: 0
 --- !u!114 &1724485916
 MonoBehaviour:
@@ -6175,8 +6174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deadLine: {fileID: 1744917475}
   fruitsParent: {fileID: 760951083}
-  fruitManager: {fileID: 1724485915}
-  durationThreshold: 3
+  durationThreshold: 0
 --- !u!1 &2037467748
 GameObject:
   m_ObjectHideFlags: 0
